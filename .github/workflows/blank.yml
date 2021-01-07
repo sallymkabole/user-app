@@ -20,7 +20,10 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '10.x'
-    - run: npm install &&  npm run build
+    - name: Install npm
+        run: npm install
+    - name: Install npm
+        run: npm run build
 - name: Deploy 🚀
       uses: sallymkabole/github-pages-deploy-action@releases/v3
       with:
